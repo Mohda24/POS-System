@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom font */
+@font-face {
+  font-family:  "Figtree", sans-serif;
+  src: url('/src/assets/FontFamily/Figtree-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* general rules */
+:root{
+  --primary-color:#965E47;
+  --secondary-color:#F8F8F8;
+  --tertiary-color:#F2F2F2;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Figtree", sans-serif;
+  background-color: var(--secondary-color);
+}
+
