@@ -12,6 +12,9 @@ export default {
         tertiary:'var(--color-tertiary)',
         sizesAndColors : 'var(--sizes-and-colors-bg)',
       },
+      fontSize : {
+        title : 'var(--title)'
+      }
     },
   },
   plugins: [],

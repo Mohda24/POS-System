@@ -6,3 +6,8 @@
 .active__size__and__color{
     border: 2px solid black;
 }
+
+.active__category{
+    font-weight: bold !important;
+    border: 2px solid black;
+}

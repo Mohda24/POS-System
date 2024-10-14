@@ -38,9 +38,12 @@ export default function Product() {
           <span className="font-bold text-[1.5rem]">359.00 DH</span>
         </div>
       </div>
-      {/* action buttons  */}
+      
+      {/* sizes and colors  */}
       <Sizes sizes={sizes} />
       <Color colors={colors} />
+
+      {/* action buttons  */}
       <div className="bg-sizes w-full h-[0.09375rem]"></div>
       <button className="bg-primary text-white py-[0.4375rem] px-[2.796875rem] rounded-[0.75rem]">
         Ajouter au panier
