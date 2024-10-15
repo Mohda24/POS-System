@@ -1,0 +1,166 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "categorie": "pants",
+        "productName": "Lightweight Denim Pants",
+        "price": 49.99,
+        "image": "pants-1.webp",
+        "sizes": [
+          { "id": 1, "name": "S" },
+          { "id": 2, "name": "MD" },
+          { "id": 3, "name": "XL" }
+        ],
+        "colors": [
+          { "id": 1, "name": "black", "colorCode": "#000" },
+          { "id": 4, "name": "green", "colorCode": "#4CAF50" }
+        ]
+      },
+      {
+        "id": 2,
+        "categorie": "pants",
+        "productName": "Slim Fit Chinos",
+        "price": 39.99,
+        "image": "pants-2.webp",
+        "sizes": [
+          { "id": 1, "name": "S" },
+          { "id": 2, "name": "MD" },
+          { "id": 3, "name": "XL" }
+        ],
+        "colors": [
+          { "id": 2, "name": "blanc", "colorCode": "#fff" }
+        ]
+      },
+      {
+        "id": 3,
+        "categorie": "pants",
+        "productName": "Classic Cargo Pants",
+        "price": 59.99,
+        "image": "pants-3.webp",
+        "sizes": [
+          { "id": 3, "name": "XL" },
+          { "id": 4, "name": "L" }
+        ],
+        "colors": [
+          { "id": 1, "name": "black", "colorCode": "#000" },
+          { "id": 5, "name": "Bleu foncé", "colorCode": "#0D0072" }
+        ]
+      },
+      {
+        "id": 4,
+        "categorie": "pants",
+        "productName": "Relaxed Fit Joggers",
+        "price": 29.99,
+        "image": "pants-4.webp",
+        "sizes": [],
+        "colors": [
+          { "id": 4, "name": "green", "colorCode": "#4CAF50" },
+          { "id": 7, "name": "Marron", "colorCode": "#965E47" }
+        ]
+      },
+      {
+        "id": 5,
+        "categorie": "perfum",
+        "productName": "Fresh Citrus Eau de Toilette",
+        "price": 69.99,
+        "image": "perfum-1.webp",
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "id": 6,
+        "categorie": "perfum",
+        "productName": "Woody Aromatic Fragrance",
+        "price": 79.99,
+        "image": "perfum-2.webp",
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "id": 7,
+        "categorie": "perfum",
+        "productName": "Spicy Oriental Perfume",
+        "price": 89.99,
+        "image": "perfum-3.webp",
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "id": 8,
+        "categorie": "perfum",
+        "productName": "Floral Musk Perfume",
+        "price": 74.99,
+        "image": "perfum-4.webp",
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "id": 9,
+        "categorie": "t-shirt",
+        "productName": "Casual Cotton T-shirt",
+        "price": 19.99,
+        "image": "t-shirt-1.webp",
+        "sizes": [
+          { "id": 2, "name": "MD" },
+          { "id": 4, "name": "L" }
+        ],
+        "colors": [
+          { "id": 1, "name": "black", "colorCode": "#000" }
+        ]
+      },
+      {
+        "id": 10,
+        "categorie": "t-shirt",
+        "productName": "Graphic Print Tee",
+        "price": 24.99,
+        "image": "t-shirt-2.webp",
+        "sizes": [],
+        "colors": [
+          { "id": 5, "name": "Bleu foncé", "colorCode": "#0D0072" }
+        ]
+      },
+      {
+        "id": 11,
+        "categorie": "t-shirt",
+        "productName": "V-Neck Cotton T-shirt",
+        "price": 22.99,
+        "image": "t-shirt-3.webp",
+        "sizes": [
+          { "id": 3, "name": "XL" }
+        ],
+        "colors": []
+      },
+      {
+        "id": 12,
+        "categorie": "t-shirt",
+        "productName": "Long Sleeve T-shirt",
+        "price": 29.99,
+        "image": "t-shirt-4.webp",
+        "sizes": [],
+        "colors": []
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "title": "pants"
+      },
+      {
+        "id": 2,
+        "title": "perfum"
+      },
+      {
+        "id": 3,
+        "title": "t-shirt"
+      },
+      {
+        "id": 4,
+        "title": "shoes"
+      },
+      {
+        "id": 5,
+        "title": "accessories"
+      }
+    ]
+  }
+  

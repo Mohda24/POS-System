@@ -1,41 +1,16 @@
 import Category from "../components/PDO/category/Category";
+import { useAppContext } from "../contexts";
 
 export default function Categories() {
-  const categories = [
-    {
-        id: 0,
-      title: "Tous",
-    },
-    {
-      id: 1,
-      title: "Pants",
-    },
-    {
-      id: 2,
-      title: "Prfum",
-    },
-    {
-      id: 3,
-      title: "T-shirt",
-    },
-    {
-      id: 4,
-      title: "Shoes",
-    },
-    {
-      id: 5,
-      title: "Accessories",
-    },
 
-  ];
+  // fetch categories from the context 
+  const { categories } = useAppContext();
+
+  // loop on categories and map them to Category component 
+  const categoriesList = categories.map((category) => {
+    return <Category key={category.id} {...category} />;
+  });
 
   // render the categories as a list of cards
-  return (
-    <div className="flex flex-wrap gap-[15px]">
-      {categories.map((category) => (
-        <Category key={category.id} category={category} />
-      ))}
-    </div>
-  );
-
+  return <div className="flex flex-wrap gap-[15px]">{categoriesList}</div>;
 }
