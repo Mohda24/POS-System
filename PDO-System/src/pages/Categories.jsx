@@ -5,9 +5,11 @@ export default function Categories() {
 
   // fetch categories from the context 
   const { categories } = useAppContext();
+  console.log(categories);
 
   // loop on categories and map them to Category component 
-  const categoriesList = categories.map((category) => {
+  const categoriesList = 
+  categories.payload.map((category) => {
     return <Category key={category.id} {...category} />;
   });
 

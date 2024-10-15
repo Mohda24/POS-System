@@ -4,11 +4,10 @@ export default function Products() {
 
   // Get the products from the AppContext
   const { products } = useAppContext();
-
  // loop on each product and add it to the Product component and send product information as props
   const ProductsList =
-    products && products.length > 0
-      ? products.map((product) =>{ 
+    products.payload && products.payload.length > 0
+      ? products.payload.map((product) =>{ 
       return <Product key={product.id} {...product} />
     }
     )

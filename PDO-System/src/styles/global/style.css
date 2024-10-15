@@ -9,5 +9,5 @@
 
 .active__category{
     font-weight: bold !important;
-    border: 2px solid black;
+    outline: 2px solid black;
 }

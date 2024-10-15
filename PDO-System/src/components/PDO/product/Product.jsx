@@ -1,14 +1,11 @@
 import Color from "../color/Color";
 import Sizes from "../sizes/Sizes";
 
-export default function Product({productName,price,image,sizes,colors}) {
-
-
+export default function Product({ productName, price, image, sizes, colors }) {
   return (
     <div className="card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
-      <div className="flex items-center justify-between gap-[1.25rem]">
-
-        {/* image  */}
+      <div className="grid grid-cols-[6.875rem_1fr] gap-[1.25rem]">
+      {/* image  */}
         <div style={{ width: "6.875rem", height: "6.25rem", borderRadius: "1rem" }} className="flex-grow-1" >
           <img src={"public/images/" + image} alt="title" className="w-full h-full rounded-[1rem]" />
         </div>
@@ -25,7 +22,7 @@ export default function Product({productName,price,image,sizes,colors}) {
       {colors && colors.length > 0 ? <Color colors={colors} /> : ""}
 
       {/* separetor */}
-      <div className="bg-sizes w-full h-[0.09375rem]"></div>
+      <div className="bg-[#cccccc] w-full h-[0.063rem]"></div>
 
       {/* action buttons  */}
       <button className="bg-primary text-white py-[0.4375rem] px-[2.796875rem] rounded-[0.75rem]">
