@@ -72,5 +72,27 @@
             "price": 29.99,
             "image": "t-shirt-4.webp"
         }
+    ] , 
+    "categories": [
+        {
+            "id": 1,
+            "title": "pants"
+        },
+        {
+            "id": 2,
+            "title": "perfum"
+        },
+        {
+            "id": 3,
+            "title": "t-shirt"
+        },
+        {
+            "id": 4,
+            "title": "shoes"
+        },
+        {
+            "id": 5,
+            "title": "accessories"
+        }
     ]
 }

@@ -5,16 +5,17 @@
 /* Import custom font */
 @font-face {
   font-family:  "Figtree", sans-serif;
-  src: url('/src/assets/FontFamily/Figtree-Regular.ttf') format('truetype');
+  src: url('./assets/FontFamily/Figtree-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 /* general rules */
 :root{
-  --primary-color:#965E47;
-  --secondary-color:#F8F8F8;
-  --tertiary-color:#F2F2F2;
+  --color-primary: #965E47;
+  --color-secondary: #F8F8F8;
+  --color-tertiary: #F2F2F2;
+  --sizes-and-colors-bg: #f2f2f2;
 }
 *{
   box-sizing: border-box;
@@ -23,6 +24,6 @@
 }
 body{
   font-family: "Figtree", sans-serif;
-  background-color: var(--secondary-color);
+  background-color: var(--color-secondary);
 }
 
