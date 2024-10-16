@@ -25,7 +25,7 @@ export default function Product({ productName, price, image, sizes, colors }) {
       <div className="bg-[#cccccc] w-full h-[0.063rem]"></div>
 
       {/* action buttons  */}
-      <button className="bg-primary text-white py-[0.4375rem] px-[2.796875rem] rounded-[0.75rem]">
+      <button className="bg-primary text-white py-[0.4375rem] px-[2.796875rem] rounded-[0.75rem] select-none hover:opacity-70 duration-300 ease-in-out transition-opacity">
         Ajouter au panier
       </button>
     </div>

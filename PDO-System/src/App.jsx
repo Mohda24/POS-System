@@ -10,6 +10,7 @@ import { AppContextProvider } from "./contexts";
 import Category from "./components/PDO/category/Category";
 import ProductSkeleton from "./components/PDO/Skeleton Loading/ProductSkeleton";
 import SkeletonCounted from "./components/PDO/Skeleton Counted/SkeletonCounted";
+import Panel from "./components/PDO/Panel/Panel";
 
 function App() {
   
@@ -90,9 +91,8 @@ function App() {
     <main className='w-[calc(100%-28.75rem)] ms-[6.875rem] px-[2.5rem] py-[1.875rem]'>
     <Category/>
     <Products/>
-
-
     </main>
+    <Panel/>
     </AppContextProvider>
     
     

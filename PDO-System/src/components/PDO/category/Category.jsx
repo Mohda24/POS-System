@@ -45,10 +45,10 @@ function Category() {
       <div className="categorie-list flex flex-wrap gap-[0.9375rem] pb-[20px]">
         {categories.loading === 'fullfilled' && (
           <>
-            <div className={`px-[1rem] py-[0.875rem] shadow-custom rounded-[2.5rem] text-[18px] font-[500] bg-white cursor-pointer  duration-300 ease-in-out max-h-[58px] ${filter === 'all' && 'border-2 border-black font-[700]'}`} onClick={() => getProductsByCategorie("all")}>Tout</div>
+            <div className={`px-[1rem] py-[0.875rem] shadow-custom rounded-[2.5rem] text-[18px] font-[500] bg-white cursor-pointer  duration-300 ease-in-out  select-none ${filter === 'all' && 'border-2 border-black font-[700]'}`} onClick={() => getProductsByCategorie("all")}>Tout</div>
             {categories.payload.map((categorie) => {
               return (
-                <div className={`px-[1rem] cursor-pointer py-[0.875rem] shadow-custom rounded-[2.5rem] text-[18px] font-[500] bg-white  duration-300 ease-in-out max-h-[58px]  ${filter === categorie.title && 'border-2 border-black font-[700]'}`} key={categorie.id} onClick={() => getProductsByCategorie(categorie.title)}>{categorie.title}</div>
+                <div className={`px-[1rem] cursor-pointer py-[0.875rem] shadow-custom rounded-[2.5rem] text-[18px] font-[500] bg-white  duration-300 ease-in-out  select-none  ${filter === categorie.title && 'border-2 border-black font-[700]'}`} key={categorie.id} onClick={() => getProductsByCategorie(categorie.title)}>{categorie.title}</div>
               );
             })}
           </>

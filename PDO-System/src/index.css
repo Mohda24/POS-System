@@ -27,4 +27,23 @@ body{
   font-family: "Figtree", sans-serif;
   background-color: var(--color-secondary);
 }
+/* Custom Scrollbar for WebKit Browsers */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: white; /* Color of the scrollbar track (background) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded corners */
+  border: 3px solid #f0f0f0; /* Adds padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #965d47e6; /* Darker color when hovering over the thumb */
+}
+
 
