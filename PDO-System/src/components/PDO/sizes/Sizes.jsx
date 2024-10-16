@@ -6,7 +6,7 @@ export default function Sizes({ sizes }) {
       ? sizes.map((size) => (
           <span
             key={size.id}
-            className="text-[0.875rem] px-[0.51875rem] py-[0.2rem] bg-sizesAndColors rounded-[3.75rem]"
+            className="text-[0.875rem] px-[0.51875rem] py-[0.2rem] bg-sizesAndColors rounded-[3.75rem] cursor-pointer"
           >
             {size.name}
           </span>

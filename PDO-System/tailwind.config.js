@@ -17,6 +17,18 @@ export default {
       boxShadow: {
         'custom': '0px 10px 20px 0px rgba(0, 0, 0, 0.02)',
       },
+      fontSize : {
+        title : 'var(--title)'
+      },
+      keyframes: {
+        'skeleton': {
+          '0%': { backgroundColor: 'hsl(200, 20%, 70%)',opacity: '0.3' },
+          '100%': { backgroundColor: 'hsl(200, 20%, 95%)',opacity: '0.3' },
+        },
+      },
+      animation: {
+        'skeleton': 'skeleton 1s linear infinite alternate',
+      },
     },
   },
   plugins: [],

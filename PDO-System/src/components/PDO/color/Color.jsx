@@ -5,7 +5,7 @@ export default function Color({ colors }) {
       ? colors.map((color) => (
           <div
             key={color.id}
-            className="flex items-center gap-[0.625rem] px-[0.51875rem] py-[0.2rem] bg-sizesAndColors rounded-[3.75rem]"
+            className="flex items-center gap-[0.625rem] px-[0.51875rem] py-[0.2rem] bg-sizesAndColors rounded-[3.75rem] cursor-pointer"
           >
             <span
               className="w-[1.125rem] h-[1.125rem] rounded-full shadow-lg"
