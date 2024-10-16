@@ -48,7 +48,7 @@ input{
 ::-webkit-scrollbar-thumb:hover {
   background-color: #965d47e6; /* Darker color when hovering over the thumb */
 }
-.Espece:focus-within .placeholder {
+.Espece:focus-within .placeholder,.Redection:focus-within .placeholder {
   top: 0px;
 }
 
