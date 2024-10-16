@@ -2,12 +2,14 @@ import React from 'react'
 import ProductCart from '../ProductCart/ProductCart'
 import img from '../../../../public/images/perfum-1.webp'
 import '../../../assets/style.css'
+import { useAppContext } from '../../../contexts'
 
 function Panel() {
 
     const [especeValue, setEspece] = React.useState('');
     const [reductionValue, setReduction] = React.useState('');
     const [caise,setCaise]=React.useState('espece')
+    const { productsInCart } = useAppContext();
 
     const handleInputChange = (e, setValue) => {
         setValue(e.target.value);
@@ -18,11 +20,15 @@ function Panel() {
             <div className="panel flex flex-col gap-[20px]">
                 <h2 className='text-[24px] font-[700]'>Panier</h2>
                 <div className="products flex flex-col gap-[20px] h-[334px] overflow-y-auto">
+                    {productsInCart && productsInCart.map((product,index)=>(
+                        <ProductCart key={index} productName={product.productName} productPrice={product.price} productImage={product.image} />
+                    ))}
+
+                    {/* <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
                     <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
                     <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
                     <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
-                    <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
-                    <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
+                    <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} /> */}
                 </div>
             </div>
             <div className="total flex justify-between items-center">

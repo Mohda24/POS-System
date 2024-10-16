@@ -1,7 +1,20 @@
+import { useAppContext } from "../../../contexts";
 import Color from "../color/Color";
 import Sizes from "../sizes/Sizes";
+import { addProdctsToLocalStorage } from "../../../function/function";
 
 export default function Product({ productName, price, image, sizes, colors }) {
+  const {setProductsInCart,productsInCart} = useAppContext();
+  const addProduct=()=>{
+    if(productsInCart.length>0 && productsInCart.find(product=>product.productName===productName))return;
+    const product={
+      productName:productName,
+      price:price,
+      image:image
+    }
+    addProdctsToLocalStorage([...productsInCart,product]);
+    setProductsInCart([...productsInCart,product]);
+  }
   return (
     <div className="card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
       <div className="grid grid-cols-[6.875rem_1fr] gap-[1.25rem]">
@@ -25,9 +38,10 @@ export default function Product({ productName, price, image, sizes, colors }) {
       <div className="bg-[#cccccc] w-full h-[0.063rem]"></div>
 
       {/* action buttons  */}
-      <button className="bg-primary text-white py-[0.4375rem] px-[2.796875rem] rounded-[0.75rem] select-none hover:opacity-70 duration-300 ease-in-out transition-opacity">
+      <button className="bg-primary text-white py-[0.4375rem] px-[2.796875rem] rounded-[0.75rem] select-none hover:opacity-70 duration-300 ease-in-out transition-opacity"
+      onClick={()=>addProduct()}>
         Ajouter au panier
       </button>
-    </div>
+   </div>
   );
 }

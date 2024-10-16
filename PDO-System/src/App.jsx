@@ -1,16 +1,13 @@
 
 import "./styles/global/style.css";
 import LeftSideBar from "./components/PDO/Aside/LeftSideBar";
-import Product from "./components/PDO/product/Product";
-import products from "../public/data/products.json";
 import Products from "./pages/Products";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AppContextProvider } from "./contexts";
 import Category from "./components/PDO/category/Category";
-import ProductSkeleton from "./components/PDO/Skeleton Loading/ProductSkeleton";
-import SkeletonCounted from "./components/PDO/Skeleton Counted/SkeletonCounted";
 import Panel from "./components/PDO/Panel/Panel";
+import { getProductsFromLocalStorage } from "./function/function";
 
 function App() {
   
@@ -25,6 +22,9 @@ function App() {
     error: null,
   });
   const[filter, setFilter] = useState("all");
+  const[productsInCart, setProductsInCart] = useState(getProductsFromLocalStorage());
+  console.log(productsInCart);
+  
 
 
   // fetch products from products.json and add them to state
@@ -84,7 +84,7 @@ function App() {
   return (
 
     <>
-    <AppContextProvider value={{ products,setProducts, categories,filter,setFilter}}>
+    <AppContextProvider value={{ products,setProducts, categories,filter,setFilter,productsInCart,setProductsInCart}}>
 
   
     <LeftSideBar/>
