@@ -1,10 +1,12 @@
 import React from 'react'
 import '../../../assets/style.css'
+import { useAppContext } from '../../../contexts'
 
 function LeftSideBar() {
+    const {coloPanel,setColorPanel}=useAppContext();
     return (
         <aside className='flex flex-col items-center gap-[3.4375rem] px-[0.9375rem] py-[1.875rem] h-[100vh] fixed top-0 left-0 w-[6.875rem] bg-white'>
-            <div className="recentagle w-[2.875rem] h-[2.8125rem] rounded-[3.5rem] bg-primary cursor-pointer"/>
+            <div onClick={()=>{setColorPanel(!coloPanel)}} className="recentagle w-[2.875rem] h-[2.8125rem] rounded-[3.5rem] bg-primary cursor-pointer"/>
             <nav className='flex-1 select-none'>
                 <ul>
                     <li className='text-[0.75rem] font-[400] text-center px-[0.625rem] py-[0.9375rem] rounded-[1rem] hover:opacity-60 cursor-pointer duration-300 ease transition-all'>

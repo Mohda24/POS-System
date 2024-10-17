@@ -23,12 +23,6 @@ function Panel() {
                     {productsInCart && productsInCart.map((product,index)=>(
                         <ProductCart key={index} productName={product.productName} productPrice={product.price} productImage={product.image} />
                     ))}
-
-                    {/* <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
-                    <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
-                    <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
-                    <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} />
-                    <ProductCart productName='Pantalon en Jean Léger' productPrice='359.99' productImage={img} /> */}
                 </div>
             </div>
             <div className="total flex justify-between items-center">
