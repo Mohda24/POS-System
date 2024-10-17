@@ -5,7 +5,7 @@ import { useAppContext } from '../../../contexts'
 function LeftSideBar() {
     const {colorPanel, setColorPanel} = useAppContext();
     return (
-        <aside className='flex flex-col items-center gap-[3.4375rem] px-[0.9375rem] py-[1.875rem] h-[100vh] fixed top-0 left-0 w-[6.875rem] bg-white'>
+        <aside className='flex flex-col items-center justify-between xl:justify-start xl:gap-[3.4375rem] px-[0.9375rem] py-[1.875rem] h-[100vh] fixed top-0 left-0 w-[6.875rem] bg-white'>
             <div onClick={() => { setColorPanel(!colorPanel) }} className="recentagle w-[2.875rem] h-[2.8125rem] rounded-[3.5rem] bg-primary cursor-pointer"/>
             <nav className='flex-1 select-none'>
                 <ul>
