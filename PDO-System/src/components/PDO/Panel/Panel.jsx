@@ -16,7 +16,7 @@ function Panel() {
     };
 
     return (
-        <section className='px-[40px] py-[40px] w-[350px] bg-white flex flex-col gap-[20px] fixed top-0 right-0 h-[100vh]'>
+        <section className='px-[40px] py-[40px] w-[350px] bg-white flex flex-col gap-[20px] fixed top-0 right-0 min-h-[100vh]'>
             <div className="panel flex flex-col gap-[20px]">
                 <h2 className='text-[24px] font-[700]'>Panier</h2>
                 <div className="products flex flex-col gap-[20px] h-[334px] overflow-y-auto">
