@@ -9,7 +9,7 @@ function ProductCart({productName, productPrice, productImage}) {
                 <div className="productImage w-[70px] h-[70px] rounded-[16px]">
                     <img src={`public/images/${productImage}`} alt={productName} className='w-full h-full object-cover max-h-full max-w-full rounded-[16px] bg-yellow-50' />
                 </div>
-                <div className="productInfo flex flex-col gap-[10px]">
+                <div className="productInfo flex flex-1 flex-col gap-[10px]">
                     <h3 className='text-[18px] leading-[120%] font-[400]'>{productName}</h3>
                     <div className="price-detail flex justify-between items-center">
                         <div className="counter flex gap-[6px] select-none">

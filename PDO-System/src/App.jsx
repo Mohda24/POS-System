@@ -2,6 +2,7 @@
 import "./styles/global/style.css";
 import LeftSideBar from "./components/PDO/Aside/LeftSideBar";
 import Products from "./pages/Products";
+import ChangeColor from "./components/PDO/ChangeColor/ChangeColor";
 
 import { useEffect, useState } from "react";
 import { AppContextProvider } from "./contexts";
@@ -24,6 +25,7 @@ function App() {
   const[filter, setFilter] = useState("all");
   const[productsInCart, setProductsInCart] = useState(getProductsFromLocalStorage());
   console.log(productsInCart);
+  const [colorPanel,setColorPanel]=useState(false);
   
 
 
@@ -84,7 +86,7 @@ function App() {
   return (
 
     <>
-    <AppContextProvider value={{ products,setProducts, categories,filter,setFilter,productsInCart,setProductsInCart}}>
+    <AppContextProvider value={{ products,setProducts, categories,filter,setFilter,productsInCart,setProductsInCart,colorPanel,setColorPanel}}>
 
   
     <LeftSideBar/>
@@ -93,6 +95,7 @@ function App() {
     <Products/>
     </main>
     <Panel/>
+    <ChangeColor/>
     </AppContextProvider>
     
     

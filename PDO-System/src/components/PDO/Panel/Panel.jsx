@@ -72,7 +72,7 @@ function Panel() {
                     <div className='icon-creditcards' />
                     <span className='text-[16px]'>Carte</span>
                 </div>
-                <button className='w-full py-[14px] px-[20px] bg-primary rounded-[16px] text-[16px] text-white font-[700]'>Valider</button>
+                <button  className='w-full py-[14px] px-[20px] bg-primary rounded-[16px] text-[16px] text-white font-[700] hover:opacity-70 duration-300 ease-in-out'>Valider</button>
             </div>
         </section>
     )

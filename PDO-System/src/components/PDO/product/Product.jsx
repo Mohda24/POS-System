@@ -12,8 +12,8 @@ export default function Product({ productName, price, image, sizes, colors }) {
       price:price,
       image:image
     }
-    addProdctsToLocalStorage([...productsInCart,product]);
-    setProductsInCart([...productsInCart,product]);
+    addProdctsToLocalStorage([product,...productsInCart]);
+    setProductsInCart([product,...productsInCart]);
   }
   return (
     <div className="card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
