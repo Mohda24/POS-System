@@ -1,6 +1,5 @@
 
 import React from 'react'
-import products from '../../../../public/data/products.json';
 import { useAppContext } from '../../../contexts';
 import SkeletonCounted from '../Skeleton Counted/SkeletonCounted';
 import CategorieSkeleton from '../Skeleton Loading/CategorieSkeleton';

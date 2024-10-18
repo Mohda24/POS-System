@@ -1,6 +1,5 @@
 import React from 'react'
 import ProductCart from '../ProductCart/ProductCart'
-import img from '../../../../public/images/perfum-1.webp'
 import '../../../assets/style.css'
 import { useAppContext } from '../../../contexts'
 
