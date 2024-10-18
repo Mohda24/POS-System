@@ -9,4 +9,12 @@ const getProductsFromLocalStorage = () => {
     : [];
     
 }
-export {addProdctsToLocalStorage,getProductsFromLocalStorage};
+
+const removeProductFromLocalStorage = (id) => {
+    console.log(id);
+    const products = getProductsFromLocalStorage();
+    const updatedProducts = products.filter((product) => product.id!== id);
+    addProdctsToLocalStorage(updatedProducts);
+    return updatedProducts;
+}
+export {addProdctsToLocalStorage,getProductsFromLocalStorage , removeProductFromLocalStorage};

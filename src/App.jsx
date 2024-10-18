@@ -25,6 +25,8 @@ function App() {
     getProductsFromLocalStorage()
   );
   const [colorPanel, setColorPanel] = useState(false);
+  const [feedBackMessage, setfeedBackMessage] = useState(false)
+
   console.log(productsInCart);
 
   // fetch products from products.json and add them to state
@@ -85,6 +87,8 @@ function App() {
           totale,
           setTotale,
           products,
+          feedBackMessage,
+          setfeedBackMessage,
           setProducts,
           categories,
           productsInCart,

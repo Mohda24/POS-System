@@ -2,19 +2,28 @@ import { useAppContext } from "../../../contexts";
 import Color from "../color/Color";
 import Sizes from "../sizes/Sizes";
 import { addProdctsToLocalStorage } from "../../../function/function";
+import { useState } from "react";
 
-export default function Product({ productName, price, image, sizes, colors }) {
-  const {setProductsInCart,productsInCart} = useAppContext();
+export default function Product({ id,productName, price, image, sizes, colors }) {
+  const {setProductsInCart,productsInCart , setfeedBackMessage , feedBackMessage} = useAppContext();
   const addProduct=()=>{
     if(productsInCart.length>0 && productsInCart.find(product=>product.productName===productName))return;
     const product={
-      productName:productName,
-      price:price,
+      id,
+      productName,
+      price,
       image:image
     }
     addProdctsToLocalStorage([product,...productsInCart]);
     setProductsInCart([product,...productsInCart]);
+
+    setfeedBackMessage(true);
+    setTimeout(() => {
+      setfeedBackMessage(false);
+    },1000)
+
   }
+
   return (
     <div className="card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
       <div className="grid grid-cols-[6.875rem_1fr] gap-[1.25rem]">

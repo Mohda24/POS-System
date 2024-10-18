@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useAppContext } from "../../../contexts";
-
-function ProductCart({ productName, productPrice, productImage }) {
+import { removeProductFromLocalStorage } from "../../../function/function";
+function ProductCart({ id, productName, productPrice, productImage }) {
   const [count, setCount] = useState(1);
 
-  const { totale, setTotale } = useAppContext();
+  const { totale, setTotale , setProductsInCart } = useAppContext();
+
+  const removeProduct = () => setProductsInCart(removeProductFromLocalStorage(id))
+
+  
   return (
     <div className="producCard flex flex-col gap-[20px]">
       <div className="productDetail flex gap-[20px]">
@@ -17,9 +21,17 @@ function ProductCart({ productName, productPrice, productImage }) {
           />
         </div>
         <div className="productInfo flex flex-1 flex-col gap-[10px]">
-          <h3 className="text-[18px] leading-[120%] font-[400]">
-            {productName}
-          </h3>
+          <div className="grid grid-cols-[1fr_25px]">
+            <h3 className="text-[18px] leading-[120%] font-[400]">
+              {productName}
+            </h3>
+            <span
+              className="w-[20px] h-[20px] cursor-pointer"
+              onClick={() => removeProduct()}
+            >
+              X
+            </span>
+          </div>
           <div className="price-detail flex justify-between items-center">
             <div className="counter flex gap-[6px] select-none">
               <button
