@@ -1,8 +1,9 @@
 import React, { useCallback, useEffect } from "react";
-import ProductCart from "./ProductCart";
-import "../assets/style.css";
-import { useAppContext } from "../contexts";
-import { getProductsFromLocalStorage } from "../function/function";
+import ProductCart from "../ProductCart/ProductCart";
+import "../../../assets/style.css";
+import { useAppContext } from "../../../contexts";
+import { getProductsFromLocalStorage } from "../../../function/function";
+
 
 function Panel() {
   const [especeValue, setEspece] = React.useState("");
@@ -16,7 +17,7 @@ function Panel() {
 
   const CalcTotale = () => {
     getProductsFromLocalStorage().forEach(prod => {
-      setTotale(prev => prod.price + prev)
+      setTotale(prev => (prod.price + prev).toFixed(2) * 1)
     })
   }
 

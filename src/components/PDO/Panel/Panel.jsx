@@ -48,7 +48,7 @@ function Panel() {
             1077.00<span className="text-[12px] ms-[4px]"></span>DH
           </span>
           <span className="  text-[18px] font-[700] leading-[100%] ">
-            {totale}<span className="text-[12px] ms-[4px]"></span>DH
+            {totale.toFixed(2)}<span className="text-[12px] ms-[4px]"></span>DH
           </span>
         </div>
         <div className="flex flex-col gap-2">
