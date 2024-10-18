@@ -11,6 +11,7 @@ import Panel from "./components/PDO/Panel/Panel";
 import { getProductsFromLocalStorage } from "./function/function";
 
 function App() {
+  const APi_url="data/products.json";
   
   const [products, setProducts] = useState({
     payload: [],
@@ -33,7 +34,7 @@ function App() {
   const getAllProducts = async () => {
     try {
       setProducts((prev) => ({ ...prev, loading: "pending", error: null }));
-      const response = await fetch("./public/data/products.json");
+      const response = await fetch(APi_url);
       const data = await response.json();
       return setProducts((prev) => ({
         ...prev,
