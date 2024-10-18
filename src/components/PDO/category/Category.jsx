@@ -4,19 +4,8 @@ import CategorieSkeleton from "../Skeleton Loading/CategorieSkeleton";
 import { useEffect, useState } from "react";
 
 function Category() {
-  // states 
-  const [filter, setFilter] = useState("all");
-  const [search , setSearch] = useState("");
-
-  //context
-  const { categories, setProducts , products } = useAppContext();
-
-  const [productsFilterd, setProductsFilterd] = useState({
-    payload: products,
-    loading: "pending",
-    error: null,
-  });
-  
+  const { categories, filter, setFilter, setProducts } = useAppContext();
+  Api_url = "data/products.json";
   // function for fetch Product using filter
   const getProductsByCategorie = async (categorie) => {
     try {
