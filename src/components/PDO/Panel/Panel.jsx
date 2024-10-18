@@ -4,6 +4,7 @@ import "../../../assets/style.css";
 import { useAppContext } from "../../../contexts";
 import { getProductsFromLocalStorage } from "../../../function/function";
 
+
 function Panel() {
   const [especeValue, setEspece] = React.useState("");
   const [reductionValue, setReduction] = React.useState("");

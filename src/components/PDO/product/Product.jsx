@@ -20,7 +20,7 @@ export default function Product({ productName, price, image, sizes, colors }) {
       <div className="grid grid-cols-[6.875rem_1fr] gap-[1.25rem]">
       {/* image  */}
         <div style={{ width: "6.875rem", height: "6.25rem", borderRadius: "1rem" }} className="flex-grow-1" >
-          <img src={"public/images/" + image} alt="title" className="w-full h-full rounded-[1rem] object-cover" />
+          <img src={"images/" + image} alt="title" className="w-full h-full rounded-[1rem] object-cover" />
         </div>
 
         {/* title and price  */}

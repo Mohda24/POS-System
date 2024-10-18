@@ -22,7 +22,7 @@ function Category() {
     try {
       setFilter(categorie);
       setProducts((prev) => ({ ...prev, loading: "pending", error: null }));
-      const response = await fetch("./public/data/products.json");
+      const response = await fetch(Api_url);
       const data = await response.json();
 
       const filteredProducts =
