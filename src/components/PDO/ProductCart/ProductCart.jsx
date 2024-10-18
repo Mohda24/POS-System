@@ -26,10 +26,9 @@ function ProductCart({ id, productName, productPrice, productImage }) {
               {productName}
             </h3>
             <span
-              className="w-[20px] h-[20px] cursor-pointer"
+              className="icon-cross text-[25px] cursor-pointer"
               onClick={() => removeProduct()}
             >
-              X
             </span>
           </div>
           <div className="price-detail flex justify-between items-center">
