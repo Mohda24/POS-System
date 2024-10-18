@@ -15,7 +15,7 @@ function ProductCart({ id, productName, productPrice, productImage }) {
       <div className="productDetail flex gap-[20px]">
         <div className="productImage w-[70px] h-[70px] rounded-[16px]">
           <img
-            src={`public/images/${productImage}`}
+            src={`/images/${productImage}`}
             alt={productName}
             className="w-full h-full object-cover max-h-full max-w-full rounded-[16px] bg-yellow-50"
           />

@@ -10,7 +10,9 @@ import Panel from "./components/PDO/Panel/Panel";
 import { getProductsFromLocalStorage } from "./function/function";
 
 function App() {
+  const APi_url = "/data/products.json";
   const [totale , setTotale] =  useState(0);
+  const [filter, setFilter] = useState("all");
   const [products, setProducts] = useState({
     payload: [],
     loading: "pending",
@@ -29,11 +31,12 @@ function App() {
 
   console.log(productsInCart);
 
+
   // fetch products from products.json and add them to state
   const getAllProducts = async () => {
     try {
       setProducts((prev) => ({ ...prev, loading: "pending", error: null }));
-      const response = await fetch("./public/data/products.json");
+      const response = await fetch(APi_url);
       const data = await response.json();
       return setProducts((prev) => ({
         ...prev,
@@ -91,6 +94,8 @@ function App() {
           setfeedBackMessage,
           setProducts,
           categories,
+          filter, 
+          setFilter,
           productsInCart,
           setProductsInCart,
           colorPanel,

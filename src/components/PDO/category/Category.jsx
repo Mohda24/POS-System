@@ -1,10 +1,11 @@
 import { useAppContext } from "../../../contexts";
 import SkeletonCounted from "../Skeleton Counted/SkeletonCounted";
 import CategorieSkeleton from "../Skeleton Loading/CategorieSkeleton";
-import { useEffect, useState } from "react";
+
 
 function Category() {
   const { categories, filter, setFilter, setProducts } = useAppContext();
+  const Api_url = "/data/products.json";
   // function for fetch Product using filter
   const getProductsByCategorie = async (categorie) => {
     try {
@@ -37,7 +38,7 @@ function Category() {
   // function for fetch Product using search
   const getProductsBySearch = async (value) => {
     setProducts((prev) => ({ ...prev, loading: "pending", error: null }));
-    const response = await fetch("./public/data/products.json");
+    const response = await fetch(Api_url);
     const data = await response.json();
 
     const filteredProducts =
