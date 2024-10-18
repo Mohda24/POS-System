@@ -58,7 +58,7 @@ function App() {
 
       setCategories((prev) => ({ ...prev, loading: "pending", error: null }));
 
-      const response = await fetch("./public/data/products.json");
+      const response = await fetch(APi_url);
       const data = await response.json();
       console.log(data);
       

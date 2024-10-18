@@ -46,7 +46,7 @@ input{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(var(--color-primary), 0.6); /* 0.6 opacity of color primary when hovering over the thumb */
+  background-color: rgba(150, 94, 71, 0.8); /* 0.6 opacity of color primary when hovering over the thumb */
 }
 .Espece:focus-within .placeholder,.Redection:focus-within .placeholder {
   top: 0px;
