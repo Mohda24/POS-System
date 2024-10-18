@@ -45,7 +45,7 @@ function Panel() {
         <div className="total flex flex-1 items-baseline  justify-between ">
           <h3 className="text-[18px] font-[700] leading-[100%]">Total</h3>
           <span className="  opacity-[0.4] text-[18px] font-[700] leading-[100%] line-through">
-          {(totale.toFixed(2) + (totale.toFixed(2) * 0.10)).toFixed(2)}<span className="text-[12px] ms-[4px]"></span>DH
+          {(totale + (totale * 0.30)).toFixed(2)}<span className="text-[12px] ms-[4px]"></span>DH
           </span>
           <span className="  text-[18px] font-[700] leading-[100%] ">
             {totale.toFixed(2)}<span className="text-[12px] ms-[4px]"></span>DH
