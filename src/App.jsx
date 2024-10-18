@@ -1,4 +1,3 @@
-
 import "./styles/global/style.css";
 import LeftSideBar from "./components/PDO/Aside/LeftSideBar";
 import Products from "./pages/Products";
@@ -11,8 +10,7 @@ import Panel from "./components/PDO/Panel/Panel";
 import { getProductsFromLocalStorage } from "./function/function";
 
 function App() {
-  const APi_url="data/products.json";
-  
+  const [totale , setTotale] =  useState(0);
   const [products, setProducts] = useState({
     payload: [],
     loading: "pending",
@@ -23,18 +21,17 @@ function App() {
     loading: "pending",
     error: null,
   });
-  const[filter, setFilter] = useState("all");
-  const[productsInCart, setProductsInCart] = useState(getProductsFromLocalStorage());
+  const [productsInCart, setProductsInCart] = useState(
+    getProductsFromLocalStorage()
+  );
+  const [colorPanel, setColorPanel] = useState(false);
   console.log(productsInCart);
-  const [colorPanel,setColorPanel]=useState(false);
-  
-
 
   // fetch products from products.json and add them to state
   const getAllProducts = async () => {
     try {
       setProducts((prev) => ({ ...prev, loading: "pending", error: null }));
-      const response = await fetch(APi_url);
+      const response = await fetch("./public/data/products.json");
       const data = await response.json();
       return setProducts((prev) => ({
         ...prev,
@@ -55,20 +52,17 @@ function App() {
 
   const getAllCategories = async () => {
     try {
-
       setCategories((prev) => ({ ...prev, loading: "pending", error: null }));
 
       const response = await fetch("./public/data/products.json");
       const data = await response.json();
-      console.log(data);
-      
+
       return setCategories((prev) => ({
         ...prev,
         payload: data.categories,
         loading: "fullfilled",
         error: null,
       }));
-
     } catch (error) {
       return setCategories((prev) => ({
         ...prev,
@@ -85,30 +79,30 @@ function App() {
   }, []);
 
   return (
-
     <>
-    <AppContextProvider value={{ products,setProducts, categories,filter,setFilter,productsInCart,setProductsInCart,colorPanel,setColorPanel}}>
-
-  
-    <LeftSideBar/>
-    <main className='w-[calc(100%-28.75rem)] ms-[6.875rem] px-[2.5rem] py-[1.875rem]'>
-    <Category/>
-    <Products/>
-    </main>
-    <Panel/>
-    <ChangeColor/>
-    </AppContextProvider>
-    
-    
-    
+      <AppContextProvider
+        value={{
+          totale,
+          setTotale,
+          products,
+          setProducts,
+          categories,
+          productsInCart,
+          setProductsInCart,
+          colorPanel,
+          setColorPanel
+        }}
+      >
+        <LeftSideBar />
+        <main className="w-[calc(100%-28.75rem)] ms-[6.875rem] px-[2.5rem] py-[1.875rem]">
+          <Category />
+          <Products />
+        </main>
+        <Panel />
+        <ChangeColor />
+      </AppContextProvider>
     </>
-  
-  
-  
-  
-  
-  
-  )}
-
+  );
+}
 
 export default App;
