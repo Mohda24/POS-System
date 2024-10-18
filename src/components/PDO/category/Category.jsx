@@ -6,7 +6,7 @@ import CategorieSkeleton from '../Skeleton Loading/CategorieSkeleton';
 
 function Category() {
   const { categories, filter, setFilter, setProducts } = useAppContext();
-  Api_url = "data/products.json";
+  const Api_url = "data/products.json";
   // function for fetch Product using filter
   const getProductsByCategorie = async (categorie) => {
     try {
