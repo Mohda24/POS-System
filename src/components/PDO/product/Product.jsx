@@ -2,7 +2,7 @@ import { useAppContext } from "../../../contexts";
 import Color from "../color/Color";
 import Sizes from "../sizes/Sizes";
 import { addProdctsToLocalStorage } from "../../../function/function";
-import { useState } from "react";
+
 
 export default function Product({ id,productName, price, image, sizes, colors }) {
   const {setProductsInCart,productsInCart , setfeedBackMessage , feedBackMessage} = useAppContext();
@@ -25,11 +25,11 @@ export default function Product({ id,productName, price, image, sizes, colors })
   }
 
   return (
-    <div className="card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
+    <div className="group card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
       <div className="grid grid-cols-[6.875rem_1fr] gap-[1.25rem]">
       {/* image  */}
-        <div style={{ width: "6.875rem", height: "6.25rem", borderRadius: "1rem" }} className="flex-grow-1" >
-          <img src={"images/" + image} alt="title" className="w-full h-full rounded-[1rem] object-cover" />
+        <div id="imgProd" style={{ width: "6.875rem", height: "6.25rem", borderRadius: "1rem" }} className="flex-grow-1 bg-tertiary" >
+          <img src={"images/" + image} alt="title" className="w-full h-full rounded-[1rem] object-cover scale-90 group-hover:scale-100 duration-300 ease-in group-hover:animate-flash" />
         </div>
 
         {/* title and price  */}

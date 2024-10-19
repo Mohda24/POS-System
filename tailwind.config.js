@@ -25,9 +25,15 @@ export default {
           '0%': { backgroundColor: 'hsl(200, 20%, 70%)',opacity: '0.3' },
           '100%': { backgroundColor: 'hsl(200, 20%, 95%)',opacity: '0.3' },
         },
+        'flash': {
+          '0%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         'skeleton': 'skeleton 1s linear infinite alternate',
+        'flash': 'flash 300ms 1',
       },
     },
   },

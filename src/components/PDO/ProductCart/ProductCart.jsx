@@ -7,7 +7,11 @@ function ProductCart({ id, productName, productPrice, productImage }) {
 
   const { totale, setTotale , setProductsInCart } = useAppContext();
 
-  const removeProduct = () => setProductsInCart(removeProductFromLocalStorage(id))
+  const removeProduct = () =>{
+    setTotale((totale - (productPrice * count).toFixed(2) * 1));
+    setProductsInCart(removeProductFromLocalStorage(id))
+    
+  } 
 
   
   return (
@@ -21,12 +25,12 @@ function ProductCart({ id, productName, productPrice, productImage }) {
           />
         </div>
         <div className="productInfo flex flex-1 flex-col gap-[10px]">
-          <div className="grid grid-cols-[1fr_25px]">
+          <div className="grid items-center grid-cols-[1fr_25px]">
             <h3 className="text-[18px] leading-[120%] font-[400]">
               {productName}
             </h3>
             <span
-              className="icon-cross text-[25px] cursor-pointer"
+              className="icon-cross text-[25px] cursor-pointer bg-primary text-white rounded-[50%] flex items-center justify-center hover:opacity-70 duration-300 ease-in-out transition-opacity"
               onClick={() => removeProduct()}
             >
             </span>
