@@ -25,7 +25,8 @@ export default function Product({ id,productName, price, image, sizes, colors })
   }
 
   return (
-    <div className="group card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
+    <div className="inline-block mb-3">
+      <div className="group card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
       <div className="grid grid-cols-[6.875rem_1fr] gap-[1.25rem]">
       {/* image  */}
         <div id="imgProd" style={{ width: "6.875rem", height: "6.25rem", borderRadius: "1rem" }} className="flex-grow-1 bg-tertiary" >
@@ -51,6 +52,8 @@ export default function Product({ id,productName, price, image, sizes, colors })
       onClick={()=>addProduct()}>
         Ajouter au panier
       </button>
+      </div>
+      
    </div>
   );
 }
