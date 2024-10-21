@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../../../assets/style.css'
 import { useAppContext } from '../../../contexts'
 
+
 function LeftSideBar() {
     const {colorPanel, setColorPanel} = useAppContext();
     const [activePage, setActivePage] = useState('Produits');

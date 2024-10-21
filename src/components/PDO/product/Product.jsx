@@ -12,7 +12,8 @@ export default function Product({ id,productName, price, image, sizes, colors })
       id,
       productName,
       price,
-      image:image
+      image:image,
+      count:1
     }
     addProdctsToLocalStorage([product,...productsInCart]);
     setProductsInCart([product,...productsInCart]);

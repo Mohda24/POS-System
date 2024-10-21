@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, {useEffect } from "react";
 import ProductCart from "../ProductCart/ProductCart";
 import "../../../assets/style.css";
 import { useAppContext } from "../../../contexts";
@@ -17,7 +17,7 @@ function Panel() {
 
   const CalcTotale = () => {
     getProductsFromLocalStorage().forEach(prod => {
-      setTotale(prev => (prod.price + prev).toFixed(2) * 1)
+      setTotale(prev => ((prod.price*prod.count) + prev).toFixed(2) * 1)
     })
   }
 

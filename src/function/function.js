@@ -10,6 +10,7 @@ const getProductsFromLocalStorage = () => {
     
 }
 
+
 const removeProductFromLocalStorage = (id) => {
     console.log(id);
     const products = getProductsFromLocalStorage();
@@ -17,4 +18,20 @@ const removeProductFromLocalStorage = (id) => {
     addProdctsToLocalStorage(updatedProducts);
     return updatedProducts;
 }
-export {addProdctsToLocalStorage,getProductsFromLocalStorage , removeProductFromLocalStorage};
+const manageCountOfProduct = (id,action) => {
+    const products = getProductsFromLocalStorage();
+    const updatedProducts = products.map((product) => {
+        if(product.id === id){
+            if(action === "increment"){
+                product.count++;
+            }else if(action === "decrement"){
+                product.count--;
+            }
+        }
+        return product;
+    });
+    addProdctsToLocalStorage(updatedProducts);
+    return updatedProducts;
+}
+
+export {addProdctsToLocalStorage,getProductsFromLocalStorage , removeProductFromLocalStorage,manageCountOfProduct};

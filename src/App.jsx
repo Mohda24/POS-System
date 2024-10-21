@@ -9,6 +9,7 @@ import Category from "./components/PDO/category/Category";
 import Panel from "./components/PDO/Panel/Panel";
 import { getProductsFromLocalStorage } from "./function/function";
 
+
 function App() {
   const APi_url = "/data/products.json";
   const [totale , setTotale] =  useState(0);
