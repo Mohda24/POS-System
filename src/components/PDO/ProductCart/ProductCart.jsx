@@ -5,15 +5,13 @@ import { removeProductFromLocalStorage } from "../../../function/function";
 function ProductCart({ id, productName, productPrice, productImage }) {
   const [count, setCount] = useState(1);
 
-  const { totale, setTotale , setProductsInCart } = useAppContext();
+  const { totale, setTotale, setProductsInCart } = useAppContext();
 
-  const removeProduct = () =>{
-    setTotale((totale - (productPrice * count).toFixed(2) * 1));
-    setProductsInCart(removeProductFromLocalStorage(id))
-    
-  } 
+  const removeProduct = () => {
+    setTotale(totale - (productPrice * count).toFixed(2) * 1);
+    setProductsInCart(removeProductFromLocalStorage(id));
+  };
 
-  
   return (
     <div className="producCard flex flex-col gap-[20px]">
       <div className="productDetail flex gap-[20px]">
@@ -25,15 +23,29 @@ function ProductCart({ id, productName, productPrice, productImage }) {
           />
         </div>
         <div className="productInfo flex flex-1 flex-col gap-[10px]">
-          <div className="grid items-center grid-cols-[1fr_25px]">
-            <h3 className="text-[18px] leading-[120%] font-[400]">
+          <div className="flex">
+            <h3 className="text-[18px] leading-[120%] font-[400] flex-1">
               {productName}
             </h3>
-            <span
-              className="close-icon hover:bg-gray-50 transition"
+            <button
+              className="ml-4 text-gray-400 hover:text-gray-700 focus:outline-none"
               onClick={() => removeProduct()}
             >
-            </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
           </div>
           <div className="price-detail flex justify-between items-center">
             <div className="counter flex gap-[6px] select-none">

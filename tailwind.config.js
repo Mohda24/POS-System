@@ -34,28 +34,20 @@ export default {
           '50%': { opacity: '0.5' },
           '100%': { opacity: '1' },
         },
-        feedback: {
-          '0%': { opacity: 0, right: '-300px' }, 
-          '20%': { opacity: 1, right: '0' },
-          '100%': { opacity: 1, right: '0' }    
+        slideIn: {
+          '0%': {transform: 'translateX(100px)'},
+          '100%': { transform: 'translateX(0px)' },  
         },
-        feedbackreverse: {
-          '0%': { opacity: 1, right: '0' },
-          '20%': { opacity: 1, right: '20px' },
-          '100%': { opacity: 0, right: '-300px' },
+        slideOut: {
+          '0%': {transform: 'translateX(0)'},
+          '100%': { transform: 'translateX(400px)' },  
         },
-        feedbacktime :{
-          '0%': { width: '0' },
-          '50%': { width: '50%' },
-          '100%': { width: '100%' },
-        }
       },
       animation: {
         skeleton: 'skeleton 1s linear infinite alternate',
         flash: 'flash 300ms 1',
-        feedback: 'feedback 4s ease-in-out',
-        feedbackreverse: 'feedbackreverse 2s ease-in-out ', 
-        feedbacktime: 'feedbacktime 4s linear forwards',
+        animateSlideIn: 'slideIn 0.5s forwards',
+        animateSlideOut: 'slideOut 0.5s forwards', 
       },
     },
   },
