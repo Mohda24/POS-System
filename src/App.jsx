@@ -8,6 +8,7 @@ import { AppContextProvider } from "./contexts";
 import Category from "./components/PDO/category/Category";
 import Panel from "./components/PDO/Panel/Panel";
 import { getProductsFromLocalStorage } from "./function/function";
+import FeedBack from "./components/feedBack/FeedBack";
 
 
 function App() {
@@ -28,7 +29,11 @@ function App() {
     getProductsFromLocalStorage()
   );
   const [colorPanel, setColorPanel] = useState(false);
-  const [feedBackMessage, setfeedBackMessage] = useState(false)
+  // feedback message
+  const [feedBackMessage, setFeedBackMessage] = useState({
+    show: null,
+    payload:{}
+  });
 
   console.log(productsInCart);
 
@@ -92,7 +97,7 @@ function App() {
           setTotale,
           products,
           feedBackMessage,
-          setfeedBackMessage,
+          setFeedBackMessage,
           setProducts,
           categories,
           filter, 
@@ -110,6 +115,7 @@ function App() {
         </main>
         <Panel />
         <ChangeColor />
+        ${feedBackMessage.show && <FeedBack />}
       </AppContextProvider>
     </>
   );

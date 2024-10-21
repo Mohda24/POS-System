@@ -24,9 +24,18 @@
   padding: 0;
 }
 body{
-  font-family: "Figtree", sans-serif;
   background-color: var(--color-secondary);
 }
+
+button,
+input,
+select{
+  font-family: inherit ;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
 input{
   all: unset;
 }

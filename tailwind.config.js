@@ -6,8 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      content:{
+        after:'" "'
+      },
       colors: {
-
         primary: 'var(--color-primary)', 
         secondary: 'var(--color-secondary)',
         tertiary:'var(--color-tertiary)',
@@ -32,10 +34,28 @@ export default {
           '50%': { opacity: '0.5' },
           '100%': { opacity: '1' },
         },
+        feedback: {
+          '0%': { opacity: 0, right: '-300px' }, 
+          '20%': { opacity: 1, right: '0' },
+          '100%': { opacity: 1, right: '0' }    
+        },
+        feedbackreverse: {
+          '0%': { opacity: 1, right: '0' },
+          '20%': { opacity: 1, right: '20px' },
+          '100%': { opacity: 0, right: '-300px' },
+        },
+        feedbacktime :{
+          '0%': { width: '0' },
+          '50%': { width: '50%' },
+          '100%': { width: '100%' },
+        }
       },
       animation: {
-        'skeleton': 'skeleton 1s linear infinite alternate',
-        'flash': 'flash 300ms 1',
+        skeleton: 'skeleton 1s linear infinite alternate',
+        flash: 'flash 300ms 1',
+        feedback: 'feedback 4s ease-in-out',
+        feedbackreverse: 'feedbackreverse 2s ease-in-out ', 
+        feedbacktime: 'feedbacktime 4s linear forwards',
       },
     },
   },
