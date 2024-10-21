@@ -64,10 +64,7 @@ function Category() {
     <div className="category mb-[21px]">
       <div className="flex justify-between items-center mb-[21px] ">
         <h1 className="text-[24px] font-[700]">Catégories</h1>
-        <input
-        type="text"
-        placeholder="Search category or product ..."
-        className="h-9 w-[240px] bg-white px-2 py-1 text-[#9ca3af] rounded-lg"
+        <input type="text" placeholder="Search category or product ..." className="h-9 w-[240px] bg-white px-2 py-1 text-[#9ca3af] rounded-lg"
         onChange={(e) => getProductsBySearch(e.target.value)}
       />
       </div>

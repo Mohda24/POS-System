@@ -13,7 +13,7 @@ export default function Color({ colors }) {
             className={` ${colorSlected == color.name && "ring ring-black" } flex items-center gap-[0.625rem] px-[0.51875rem] py-[0.2rem] bg-sizesAndColors rounded-[3.75rem] cursor-pointer`}
           >
             <span
-              className="w-[1.125rem] h-[1.125rem] rounded-full shadow-lg"
+              className="w-[1.125rem] h-[1.125rem] rounded-full shadow-custom1"
               style={{ backgroundColor: color.colorCode }}
             ></span>
             <span className="text-[0.875rem]">{color.name}</span>
