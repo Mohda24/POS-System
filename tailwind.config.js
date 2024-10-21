@@ -18,8 +18,7 @@ export default {
       },
       boxShadow: {
         'custom': '0px 10px 20px 0px rgba(0, 0, 0, 0.02)',
-        'custom1':'0px 4px 10px 0px rgba(0, 0, 0, 0.15)'
-
+        'custom1':'0px 4px 10px 0px rgba(0, 0, 0, 0.4)'
       },
       fontSize : {
         title : 'var(--title)'
