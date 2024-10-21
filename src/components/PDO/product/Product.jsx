@@ -11,6 +11,7 @@ export default function Product({
   image,
   sizes,
   colors,
+  categorie
 }) {
   const {
     setProductsInCart,
@@ -46,15 +47,15 @@ export default function Product({
   };
 
   return (
-    <div className="inline-block mb-3">
-      <div className="group card flex flex-col gap-[1.25rem] w-[22.1875rem] p-[1.5rem] bg-white rounded-[1.25rem]">
-        <div className="grid grid-cols-[6.875rem_1fr] gap-[1.25rem]">
+    <div className="inline-block mb-3 w-[294px] p-[1.5rem] bg-white rounded-[1.25rem]">
+      <div className="group card flex flex-col gap-[1.25rem] ">
+        <div className="gap-[16px] grid grid-cols-[90px_1fr]">
           {/* image  */}
           <div
             id="imgProd"
             style={{
-              width: "6.875rem",
-              height: "6.25rem",
+              width: "90px",
+              height: "90px",
               borderRadius: "1rem",
             }}
             className="flex-grow-1 bg-tertiary"
@@ -67,9 +68,12 @@ export default function Product({
           </div>
 
           {/* title and price  */}
-          <div className="flex flex-col gap-[0.625rem]">
-            <h2 className="text-[1.25rem]">{productName}</h2>
-            <span className="font-bold text-[1.5rem]">{price} DH</span>
+          <div className="flex flex-col gap-[6px]">
+            <span className="text-[rgba(0,0,0,0.4)]">{categorie}</span>
+            <h2 className="text-[18px]">{productName}</h2>
+            <span className="font-bold text-[1.5rem]">{price}
+              <span className="text-[14px] font-bold">  DH</span>
+            </span>
           </div>
         </div>
 
@@ -82,7 +86,7 @@ export default function Product({
 
         {/* action buttons  */}
         <button
-          className="bg-primary text-white py-[0.4375rem] px-[2.796875rem] rounded-[0.75rem] select-none hover:opacity-70 duration-300 ease-in-out transition-opacity font-"
+          className="bg-primary text-white py-[14px] px-[20px] font-bold rounded-[0.75rem] select-none hover:opacity-70 duration-300 ease-in-out transition-opacity font-"
           onClick={() => addProduct()}
         >
           Ajouter au panier
