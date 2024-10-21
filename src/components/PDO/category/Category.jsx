@@ -68,7 +68,7 @@ function Category() {
         onChange={(e) => getProductsBySearch(e.target.value)}
       />
       </div>
-      <div className="categorie-list flex flex-wrap gap-[0.9375rem] pb-[20px]">
+      <div className="categorie-list remoev-scrollbar w-full inline-flex items-center overflow-auto gap-[0.9375rem] pb-[20px]">
         {categories.loading === "fullfilled" && (
           <>
             <div
@@ -82,7 +82,7 @@ function Category() {
             {categories.payload.map((categorie) => {
               return (
                 <div
-                  className={`px-[1rem] cursor-pointer py-[0.875rem] shadow-custom rounded-[2.5rem] text-[18px] font-[500] bg-white  duration-300 ease-in-out  select-none  ${
+                  className={`text-nowrap	 px-[1rem] cursor-pointer py-[0.875rem] shadow-custom rounded-[2.5rem] text-[18px] font-[500] bg-white  duration-300 ease-in-out  select-none  ${
                     filter === categorie.title &&
                     "border-2 border-black font-[700]"
                   }`}

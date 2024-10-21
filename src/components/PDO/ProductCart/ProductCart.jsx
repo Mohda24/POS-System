@@ -30,7 +30,7 @@ function ProductCart({ id, productName, productPrice, productImage }) {
               {productName}
             </h3>
             <span
-              className="icon-cross text-[25px] cursor-pointer bg-primary text-white rounded-[50%] flex items-center justify-center hover:opacity-70 duration-300 ease-in-out transition-opacity"
+              className="close-icon hover:bg-gray-50 transition"
               onClick={() => removeProduct()}
             >
             </span>

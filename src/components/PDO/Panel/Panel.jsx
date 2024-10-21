@@ -30,7 +30,7 @@ function Panel() {
     <section className="px-[20px] py-[20px] w-[350px] bg-white fixed top-0 right-0 min-h-[100vh] flex flex-col gap-[20px]">
       <div className="panel lg:h-[279px] xl:h-[370px] flex flex-col gap-[20px]">
         <h2 className="text-[24px] font-[700]">Panier</h2>
-        <div className="products flex flex-col gap-[20px] h-[334px] overflow-y-auto">
+        <div className="products flex flex-col gap-[20px] h-[334px] overflow-y-auto remoev-scrollbar">
           {productsInCart &&
             productsInCart.map((product, index) => (
               <ProductCart
