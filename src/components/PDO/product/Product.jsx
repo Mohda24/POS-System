@@ -22,7 +22,7 @@ export default function Product({
   const addProduct = () => {
     if (
       productsInCart.length > 0 &&
-      productsInCart.find((product) => product.productName === productName)
+      productsInCart.find((product) => product.id === id)
     )
       return;
     const product = {

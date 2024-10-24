@@ -17,7 +17,7 @@ function Panel() {
   const CalcTotale = () => {
     setTotale(0); // Reset totale before recalculating
     getProductsFromLocalStorage().forEach((prod) => {
-      setTotale((prev) => prod.price + prev);
+      setTotale((prev) => (prod.price*prod.count) + prev);
     });
   };
 
@@ -32,13 +32,14 @@ function Panel() {
         <h2 className="text-[24px] font-[700]">Panier</h2>
         <div className="products flex flex-col gap-[20px] h-[334px] overflow-y-auto remoev-scrollbar">
           {productsInCart &&
-            productsInCart.map((product, index) => (
+            productsInCart.map((product) => (
               <ProductCart
-              key={index}
+              key={product.id}
               id={product.id}
               productName={product.productName}
               productPrice={product.price}
               productImage={product.image}
+              productCount={product.count}
             />
             ))}
         </div>

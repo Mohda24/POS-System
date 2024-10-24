@@ -20,13 +20,16 @@ const removeProductFromLocalStorage = (id) => {
 }
 const manageCountOfProduct = (id,action) => {
     const products = getProductsFromLocalStorage();
+    console.log("mohda");
+    
     const updatedProducts = products.map((product) => {
         if(product.id === id){
             if(action === "increment"){
                 product.count++;
-            }else if(action === "decrement"){
+            }else if(action === "decrement" && product.count > 1){
                 product.count--;
             }
+            console.log(product.count);
         }
         return product;
     });

@@ -1,16 +1,30 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useAppContext } from "../../../contexts";
-import { removeProductFromLocalStorage } from "../../../function/function";
-function ProductCart({ id, productName, productPrice, productImage }) {
-  const [count, setCount] = useState(1);
+import { removeProductFromLocalStorage,manageCountOfProduct } from "../../../function/function";
+function ProductCart({ id, productName, productPrice, productImage, productCount }) {
+  const [count, setCount] = useState(productCount);
 
   const { totale, setTotale, setProductsInCart } = useAppContext();
 
   const removeProduct = () => {
-    setTotale(totale - (productPrice * count).toFixed(2) * 1);
+    
+    setTotale((prev) => prev - productPrice * count);
     setProductsInCart(removeProductFromLocalStorage(id));
   };
+  const handleDecrement = () => {
+    if (count > 1) {
+      setProductsInCart(manageCountOfProduct(id, "decrement"));
+      setCount(count - 1);
+      setTotale((prev) => prev - productPrice);
+    }
+  };
+  const handleIncrement = () => {
+    setProductsInCart(manageCountOfProduct(id, "increment"));
+    setCount(count + 1);
+    setTotale((prev) => prev + productPrice);
+  };
+
 
   return (
     <div className="producCard flex flex-col gap-[20px]">
@@ -51,22 +65,14 @@ function ProductCart({ id, productName, productPrice, productImage }) {
             <div className="counter flex gap-[6px] select-none">
               <button
                 className="text-[14px] w-[24px] h-[24px] p-[8px] bg-primary rounded-[6px] font-[400] text-white flex items-center justify-center"
-                onClick={() => {
-                  setTotale((prev) =>
-                    count > 1 ? (prev - productPrice).toFixed(2) * 1 : prev
-                  );
-                  setCount(count === 1 ? count : count - 1);
-                }}
+                onClick={() => handleDecrement()}
               >
                 -
               </button>
               <span className="text-[16px] font-[400]">{count}</span>
               <button
                 className="text-[14px] w-[24px] h-[24px] p-[8px] bg-primary rounded-[6px] font-[400] text-white flex items-center justify-center"
-                onClick={() => {
-                  setTotale((prev) => (prev + productPrice).toFixed(2) * 1);
-                  setCount(count + 1);
-                }}
+                onClick={() => handleIncrement()}
               >
                 +
               </button>
