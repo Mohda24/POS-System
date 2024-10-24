@@ -2,7 +2,7 @@ import { useAppContext } from "../../../contexts";
 import Color from "../color/Color";
 import Sizes from "../sizes/Sizes";
 import { addProdctsToLocalStorage } from "../../../function/function";
-import { useCallback, useMemo } from "react";
+
 
 export default function Product({
   id,
@@ -47,15 +47,15 @@ export default function Product({
   };
 
   return (
-    <div className="inline-block mb-3 w-[294px] p-[1.5rem] bg-white rounded-[1.25rem]">
+    <div className="inline-block mb-3 w-[18.375rem] p-[1.5rem] bg-white rounded-[20px]">
       <div className="group card flex flex-col gap-[1.25rem] ">
-        <div className="gap-[16px] grid grid-cols-[90px_1fr]">
+        <div className="gap-[1rem] grid grid-cols-[5.625rem_1fr]">
           {/* image  */}
           <div
             id="imgProd"
             style={{
-              width: "90px",
-              height: "90px",
+              width: "5.625rem",
+              height: "5.625rem",
               borderRadius: "1rem",
             }}
             className="flex-grow-1 bg-tertiary"
@@ -63,16 +63,16 @@ export default function Product({
             <img
               src={"images/" + image}
               alt="title"
-              className="w-full h-full rounded-[1rem] object-cover scale-90 group-hover:scale-100 duration-300 ease-in group-hover:animate-flash"
+              className="w-full h-full rounded-[16px] object-cover scale-90 group-hover:scale-100 duration-300 ease-in group-hover:animate-flash"
             />
           </div>
 
           {/* title and price  */}
-          <div className="flex flex-col gap-[6px]">
+          <div className="flex flex-col gap-[.375rem]">
             <span className="text-[rgba(0,0,0,0.4)]">{categorie}</span>
-            <h2 className="text-[18px]">{productName}</h2>
-            <span className="font-bold text-[1.5rem]">{price}
-              <span className="text-[14px] font-bold">  DH</span>
+            <h2 className="text-[1.125rem]">{productName}</h2>
+            <span className="font-bold text-[24px]">{price}
+              <span className="text-[.875rem] font-bold">  DH</span>
             </span>
           </div>
         </div>
@@ -82,11 +82,11 @@ export default function Product({
         {colors && colors.length > 0 ? <Color colors={colors} /> : ""}
 
         {/* separetor */}
-        <div className="bg-[#cccccc] w-full h-[0.063rem]"></div>
+        <div className="bg-[#cccccc] w-full h-[.063rem]"></div>
 
         {/* action buttons  */}
         <button
-          className="bg-primary text-white py-[14px] px-[20px] font-bold rounded-[0.75rem] select-none hover:opacity-70 duration-300 ease-in-out transition-opacity font-"
+          className="bg-primary text-white py-[.875rem] px-[1.25rem] font-bold rounded-[.75rem] select-none hover:opacity-70 duration-300 ease-in-out transition-opacity font-"
           onClick={() => addProduct()}
         >
           Ajouter au panier

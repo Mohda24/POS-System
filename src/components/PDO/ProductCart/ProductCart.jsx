@@ -27,18 +27,18 @@ function ProductCart({ id, productName, productPrice, productImage, productCount
 
 
   return (
-    <div className="producCard flex flex-col gap-[20px]">
-      <div className="productDetail flex gap-[20px]">
-        <div className="productImage w-[70px] h-[70px] rounded-[16px]">
+    <div className="producCard flex flex-col gap-[1.25rem]">
+      <div className="productDetail flex gap-[1.25rem]">
+        <div className="productImage w-[4.375rem] h-[4.375rem] rounded-[1rem]">
           <img
             src={`/images/${productImage}`}
             alt={productName}
-            className="w-full h-full object-cover max-h-full max-w-full rounded-[16px] bg-yellow-50"
+            className="w-full h-full object-cover max-h-full max-w-full rounded-[1rem] bg-yellow-50"
           />
         </div>
-        <div className="productInfo flex flex-1 flex-col gap-[10px]">
+        <div className="productInfo flex flex-1 flex-col gap-[.625rem]">
           <div className="flex">
-            <h3 className="text-[18px] leading-[120%] font-[400] flex-1">
+            <h3 className="text-[1.125rem] leading-[120%] font-[400] flex-1">
               {productName}
             </h3>
             <button
@@ -62,29 +62,29 @@ function ProductCart({ id, productName, productPrice, productImage, productCount
             </button>
           </div>
           <div className="price-detail flex justify-between items-center">
-            <div className="counter flex gap-[6px] select-none">
+            <div className="counter flex gap-[.375rem] select-none">
               <button
-                className="text-[14px] w-[24px] h-[24px] p-[8px] bg-primary rounded-[6px] font-[400] text-white flex items-center justify-center"
+                className="text-[.875rem] w-[1.5rem] h-[1.5rem] p-[.5rem] bg-primary rounded-[.375rem] font-[400] text-white flex items-center justify-center"
                 onClick={() => handleDecrement()}
               >
                 -
               </button>
-              <span className="text-[16px] font-[400]">{count}</span>
+              <span className="text-[1rem] font-[400]">{count}</span>
               <button
-                className="text-[14px] w-[24px] h-[24px] p-[8px] bg-primary rounded-[6px] font-[400] text-white flex items-center justify-center"
+                className="text-[.875rem] w-[1.5rem] h-[1.5rem] p-[.5rem] bg-primary rounded-[.375rem] font-[400] text-white flex items-center justify-center"
                 onClick={() => handleIncrement()}
               >
                 +
               </button>
             </div>
-            <div className="price text-[16px] leading-[100%]">
+            <div className="price text-[1rem] leading-[100%]">
               {(productPrice * count).toFixed(2)}
-              <span className="ms-[5px] text-[10px]">DH</span>
+              <span className="ms-[.3125rem] text-[.625rem]">DH</span>
             </div>
           </div>
         </div>
       </div>
-      <div className="seperator h-[1px] w-full bg-[rgba(0,0,0,0.30)]" />
+      <div className="seperator h-[.0625rem] w-full bg-[rgba(0,0,0,0.30)]" />
     </div>
   );
 }
