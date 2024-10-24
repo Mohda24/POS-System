@@ -3,6 +3,7 @@ import ProductCart from "../ProductCart/ProductCart";
 import "../../../assets/style.css";
 import { useAppContext } from "../../../contexts";
 import { getProductsFromLocalStorage } from "../../../function/function";
+import PanelVide from "../PanelVide/PanelVide";
 
 function Panel() {
   const [especeValue, setEspece] = React.useState("");
@@ -28,6 +29,9 @@ function Panel() {
   return (
 
     <section className="px-[20px] py-[20px] w-[350px] bg-white fixed top-0 right-0 min-h-[100vh] flex flex-col gap-[20px]">
+      {productsInCart.length >=1 
+      ?
+      <>
       <div className="panel lg:h-[279px] xl:h-[370px] flex flex-col gap-[20px]">
         <h2 className="text-[24px] font-[700]">Panier</h2>
         <div className="products flex flex-col gap-[20px] h-[334px] overflow-y-auto remoev-scrollbar">
@@ -54,6 +58,16 @@ function Panel() {
             {totale.toFixed(2)}<span className="text-[12px] ms-[4px]"></span>DH
           </span>
         </div>
+      </>
+      :
+      <>
+      <h2 className="text-[24px] font-[700]">Panier</h2>
+      <PanelVide/>
+
+      </>
+      
+      }
+      
         <div className="flex flex-col gap-[20px]">
 
           <div className="Espece relative px-[20px] py-[14px] rounded-[12px] border-[1px] border-[#AAAAAA] flex focus-within:focus">
