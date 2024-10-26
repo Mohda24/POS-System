@@ -47,7 +47,7 @@ export default function Product({
   };
 
   return (
-    <div className="inline-block mb-3 w-[18.375rem] p-[1.5rem] bg-white rounded-[20px]">
+    <div className="inline-block mb-3 w-full max-w-[440px] p-[1.5rem] bg-white rounded-[20px]">
       <div className="group card flex flex-col gap-[1.25rem] ">
         <div className="gap-[1rem] grid grid-cols-[5.625rem_1fr]">
           {/* image  */}

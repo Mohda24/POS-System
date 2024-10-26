@@ -48,6 +48,9 @@ export default {
         animateSlideIn: 'slideIn 0.5s forwards',
         animateSlideOut: 'slideOut 0.5s forwards', 
       },
+      screens : {
+        '4xl' : '2000px'
+      }
     },
   },
   plugins: [],

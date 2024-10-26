@@ -16,7 +16,7 @@ export default function Products() {
       
       
   return (
-    <div className="cards flex items-center flex-wrap gap-[1.875rem]">
+    <div className="cards 4xl:columns-4 2xl:columns-3 xl:columns-2 lg:columns-1">
       {/* Render the products as a list of cards */}
       {products.loading === "pending" ?  <SkeletonCounted Skeleton={ProductSkeleton} count={5} />
       : ProductsList}
