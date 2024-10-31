@@ -28,7 +28,7 @@ function Panel() {
 
   return (
 
-    <section className="px-[20px] py-[20px] w-[350px] bg-white fixed top-0 right-0 min-h-[100vh] flex flex-col gap-[20px]">
+    <section className="px-[20px] py-[20px] w-[350px] bg-white fixed top-0 right-0 h-[100dvh] flex flex-col gap-[20px]">
       {productsInCart.length >=1 
       ?
       <>
